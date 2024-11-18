@@ -1,1 +1,1 @@
-./node/npm.ps1 run dev
+./node/node.exe "node_modules\vite\bin\vite.js"
