@@ -1,1 +1,0 @@
-./node/node.exe "node_modules\vite\bin\vite.js"

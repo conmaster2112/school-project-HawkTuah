@@ -1,13 +1,28 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf8"/>
+        <meta name="description" content="Toto je příklad metainformace pro popis stránky."/>
+        <meta name="keywords" content="HTML, CSS, webdesign, programování"/>
+        <meta name="author" content="ConMaster"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+        <link rel="stylesheet" href="global.css"/>
+        <link rel="stylesheet" href="index.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <script type="module" src="src/index.js"></script>
+        <title>Yes</title>
+    </head>
+    <body class="dark">
+        <button id="theme-switcher">
+            &#9788; / &#9790;
+        </button>
+        <form id="form-registry">
+            <h1 style="font-size: 3rem; margin: 0.2rem;">Login</h1>
+            <label for="username">Username</label>
+            <input id="username" type="text" required/>
+            <label for="password">Password</label>
+            <input id="password" type="password" required/>
+        </form>
+    </body>
 </html>
