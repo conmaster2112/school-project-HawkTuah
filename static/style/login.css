@@ -1,0 +1,79 @@
+html {
+    background-image: url("/assets/sakura.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    text-align: center;
+}
+body {
+    --bg-color: #eee8;
+    background-color: var(--bg-color);
+    backdrop-filter: blur(10rem);
+    height: 100vh;
+    width: 100vw;
+}
+.dark {
+    --bg-color: #111c;
+}
+.form {
+    height: 80%;
+    width: 100vw;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    background-color: #9992;
+    border: solid 1px #0002;
+    color: var(--main-color);
+    border-radius: 0.1rem;
+}
+.form-content {
+    background-color: var(--main-background);
+    border-radius: 0.6rem;
+    padding: 1.5rem 2rem;
+    height: max-content;
+    box-shadow: 0.1rem 0.1rem 0.5rem #0005;
+}
+.form-content .br {
+    margin: 0.2rem;
+    background-color: #9992;
+    height: 2px;
+}
+.form-content h1 {
+    margin: 0.2rem;
+}
+tr p {
+    text-align: left;
+    margin: 8px;
+}
+td button {
+    margin: 0px;
+    padding: 0px;
+    top: 5px;
+    background-color: transparent;
+    border-radius: 0.1rem;
+    border: solid 0;
+    font-size: large;
+}
+tr button:hover {
+    background-color: #9992;
+}
+/* Hide default icons */
+input[type="password"]::-ms-reveal {
+    background-image: none;
+    content: "👁️";
+    color: var(--main-color);
+}
+button {
+    margin: 0.5rem;
+    background-color: #aaa3;
+    border: solid 0.1rem transparent;
+    color: var(--main-color);
+    border-radius: 0.2rem;
+    padding: 0.2rem 1rem;
+}
+button:hover {
+    background-color: #9992;
+}
