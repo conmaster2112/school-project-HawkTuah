@@ -19,3 +19,7 @@ export function createMinimal(text, timeout){
     setTimeout(()=>h.remove(), timeout??300_000);
     return h;
 };
+export function warnElement(e, timeout){
+    e.style.borderColor = "#F003";
+    setTimeout(()=>(e.style.borderColor = ""), timeout??2000);
+}

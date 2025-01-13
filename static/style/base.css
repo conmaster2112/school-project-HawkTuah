@@ -14,10 +14,28 @@ body {
 
 .minimal {
     color: #999a;
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     align-self: center;
 }
 .error {
-    color: #a30a;
+    color: #d30b;
+}
+a {
+    font-size: small;
+    color: #2af;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #4bf;
+    cursor: pointer;
+}
+input {
+    height: 1.6rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    color: var(--main-color);
+    padding: 0.2rem;
 }

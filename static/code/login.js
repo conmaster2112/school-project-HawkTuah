@@ -1,22 +1,30 @@
-// JavaScript to toggle the password visibility
-document.addEventListener('DOMContentLoaded', function () {
-    const textField = document.getElementById('textField');
-    const loginButton = document.getElementById('button-login');
-    
-    /*
-    // main button
-    const toggleButton = document.getElementById('button-toggle');
-    const passwordField = document.getElementById('passwordField');
-    toggleButton.addEventListener('click', function () {
-      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-      passwordField.setAttribute('type', type);
-      if(type === "password") toggleButton.textContent = "👓";
-      else toggleButton.textContent = "👀";
-    });*/
+import { onButton } from "./utils";
 
-    // login button
-    loginButton.addEventListener('click', function () {
-        location.replace("./home");
-    });
+let lastMessage = null;
+onButton("button-login",  (b)=>{
+    lastMessage?.remove();
+    const password = document.getElementById("input-password");
+    const name = document.getElementById("input-name");
+    let msg = null;
+    for(const e of [name, password]){
+        if(!e.value){
+            warnElement(e);
+            msg = "Inputs can't be empty!";
+            continue;
+        }
+        if(e.value.length < 4){
+            warnElement(e);
+            msg = "Required at least 5 chars";
+            continue;
+        }
+    }
+    if(msg){
+        const p = createMinimal(msg, 5_000);
+        p.classList.add("error");
+        b.after(p);
+        lastMessage = p;
+        return;
+    }
     
-  });
+    location.href = "./chat";
+});

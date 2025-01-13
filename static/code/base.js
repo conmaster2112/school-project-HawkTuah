@@ -1,6 +1,7 @@
 const theme = localStorage.getItem("theme");
 if (theme === "dark") document.body.classList.add("dark");
 else document.body.classList.remove("dark");
+localStorage.setItem("theme", theme === "dark"?"light":"dark");
 // JavaScript to toggle the password visibility
 document.addEventListener('DOMContentLoaded', function () {
     for (const el of document.getElementsByClassName("password-toggle")) ShowHideButton(el);

@@ -7,28 +7,29 @@
         <meta name="author" content="ConMaster"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="/style/base.css"/>
-        <link rel="stylesheet" href="/style/login.css"/>
+        <link rel="stylesheet" href="/style/forms.css"/>
         <script type="module" src="/code/login.js"></script>
         <script type="module" src="/code/base.js"></script>
-        <title>Yes</title>
+        <title>Chatter - Login</title>
     </head>
     <body class="dark">
         <div class="form">
             <div class="form-content">
-                <h1>Talk Tuah</h1>
+                <h1>Chatter</h1>
                 <div class="br"></div>
                 <table>
                     <tr>
-                        <td><p>Name </p></td>
-                        <td><input type="text" id="textField"/></td>
+                        <td><p>Name / Email </p></td>
+                        <td><input type="text" id="input-text"/></td>
                     </tr>
                     <tr>
                         <td><p>Password</p></td>
-                        <td><input id="passwordField" type="password"/></td>
-                        <td><button class="password-toggle input:passwordField">👓</button></td>
+                        <td><input id="input-password" type="password"/></td>
+                        <td><button class="password-toggle input:input-password">👓</button></td>
                     </tr>
                 </table>
-                <button id="button-login">Loggin</button>
+                <button id="button-login">Log in</button>
+                <a href="./register.html">Create New Account</a>
                 <div class="br"></div>
             </div>
         </div>

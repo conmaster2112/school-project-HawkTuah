@@ -26,11 +26,11 @@ body {
 input {
     background-color: #9992;
     border: solid 1px #0002;
-    color: var(--main-color);
-    border-radius: 0.1rem;
 }
 .form-content {
-    background-color: var(--main-background);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background-2);
     border-radius: 0.6rem;
     padding: 1.5rem 2rem;
     height: max-content;
@@ -53,7 +53,7 @@ td button {
     padding: 0px;
     top: 5px;
     background-color: transparent;
-    border-radius: 0.1rem;
+    border-radius: 0.3rem;
     border: solid 0;
     font-size: large;
 }
@@ -63,7 +63,6 @@ tr button:hover {
 /* Hide default icons */
 input[type="password"]::-ms-reveal {
     background-image: none;
-    content: "👁️";
     color: var(--main-color);
 }
 button {
@@ -71,6 +70,7 @@ button {
     background-color: #aaa3;
     border: solid 0.1rem transparent;
     color: var(--main-color);
+    height: 2rem;
     border-radius: 0.2rem;
     padding: 0.2rem 1rem;
 }
