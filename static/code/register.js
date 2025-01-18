@@ -1,14 +1,20 @@
+import { AUTHENTICATION, createUrlWith } from "./auth.js";
 import { createMinimal, onButton, warnElement } from "./utils.js";
+
+const INPUTS = {
+    "input-name":0,
+    "input-email":1,
+    "input-password":1,
+    "input-confirm":1
+}
 
 let lastMessage = null;
 onButton("button-register", (b)=>{
     lastMessage?.remove();
-    const password = document.getElementById("input-password");
-    const confirm = document.getElementById("input-confirm");
-    const name = document.getElementById("input-name");
-    const email = document.getElementById("input-email");
+    const inputElements = Object.keys(INPUTS).map(e=>document.getElementById(e));
+
     let msg = null;
-    for(const e of [name, email,password, confirm]){
+    for(const e of inputElements){
         if(!e.value){
             warnElement(e);
             msg = "Inputs can't be empty!";
@@ -27,6 +33,26 @@ onButton("button-register", (b)=>{
         lastMessage = p;
         return;
     }
+
+    const [name, email, password, confirm] = inputElements;
+    const emailValue = email.value;
+    console.log(emailValue, emailValue.match(/\g/));
+    if(!emailValue.match(/\@/)){
+        const p = createMinimal("Email must include '@'", 5_000);
+        p.classList.add("error");
+        b.after(p);
+        lastMessage = p;
+        warnElement(email);
+        return;
+    }
+    if(AUTHENTICATION.isEmailRegistered(emailValue)){
+        const p = createMinimal("This email already exists", 5_000);
+        p.classList.add("error");
+        b.after(p);
+        lastMessage = p;
+        warnElement(email);
+        return;
+    }
     if(password.value !== confirm.value){
         warnElement(password);
         warnElement(confirm);
@@ -36,5 +62,9 @@ onButton("button-register", (b)=>{
         lastMessage = p;
         return;
     }
-    location.href = "./login";
+
+    const account = AUTHENTICATION.registry(email.value, name.value, password.value);
+    const url = createUrlWith(account.email);
+    url.pathname = "pages/login";
+    location = url;
 });

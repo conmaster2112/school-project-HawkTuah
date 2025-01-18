@@ -1,12 +1,19 @@
-import { onButton } from "./utils";
+import { AUTHENTICATION, createUrlWith, getAccountEmailText } from "./auth.js";
+import { createMinimal, onButton, warnElement } from "./utils.js";
 
 let lastMessage = null;
-onButton("button-login",  (b)=>{
+{
+    let email = getAccountEmailText();
+    if(email){
+        document.getElementById("input-email").value = email;
+    }
+}
+onButton("button-login", async (b)=>{
     lastMessage?.remove();
     const password = document.getElementById("input-password");
-    const name = document.getElementById("input-name");
+    const email = document.getElementById("input-email");
     let msg = null;
-    for(const e of [name, password]){
+    for(const e of [email, password]){
         if(!e.value){
             warnElement(e);
             msg = "Inputs can't be empty!";
@@ -25,6 +32,27 @@ onButton("button-login",  (b)=>{
         lastMessage = p;
         return;
     }
-    
-    location.href = "./chat";
+
+    const m = email.value;
+    const account = AUTHENTICATION.getAccount(m);
+    if(!account){
+        const p = createMinimal("No account found with this email", 5_000);
+        p.classList.add("error");
+        b.after(p);
+        lastMessage = p;
+        return;
+    }
+
+    if(account.password !== password.value){
+        const p = createMinimal("Password or email is not valid", 5_000);
+        p.classList.add("error");
+        b.after(p);
+        lastMessage = p;
+        return;
+    }
+
+    const url = createUrlWith(m);
+    url.pathname = "pages/chat";
+    console.log(url.href);
+    location = url;
 });

@@ -1,12 +1,22 @@
+import { onButton } from "./utils.js";
+
 const theme = localStorage.getItem("theme");
 if (theme === "dark") document.body.classList.add("dark");
 else document.body.classList.remove("dark");
-localStorage.setItem("theme", theme === "dark"?"light":"dark");
 // JavaScript to toggle the password visibility
 document.addEventListener('DOMContentLoaded', function () {
     for (const el of document.getElementsByClassName("password-toggle")) ShowHideButton(el);
 });
 
+
+
+onButton("theme-toggle", ()=>{
+    let theme = localStorage.getItem("theme");
+    localStorage.setItem("theme", theme === "dark"?"light":"dark");
+    theme = localStorage.getItem("theme");
+    if (theme === "dark") document.body.classList.add("dark");
+    else document.body.classList.remove("dark");
+});
 
 
 function ShowHideButton(button) {

@@ -8,156 +8,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     
         <link rel="stylesheet" href="/style/base.css"/>
+        <link rel="stylesheet" href="/style/chat.css"/>
         <script type="module" src="/code/base.js"></script>
-        <title>Yes</title>
+        <script type="module" src="/code/chat.js"></script>
+        <title>Chatter</title>
     </head>
     <body class="dark">
-        <header>
-            <nav>
-                <p>Hello thats the Chat tuah</p>
-            </nav>
-        </header>
-        <div class="content">
-            <div>
-            <h>Hello</h>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <p>Hello</p>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
-            <h>Hello</h>
+        <div class="body">
+            <div class="sidebar">
+                <img src="/assets/profile_empty.png" class="profile_picture"></img>
+                <div>
+                    <strong id="profile-name">Con Master</strong>
+                </div>
+                <button id="theme-toggle">Toggle Theme</button>
+            </div>
+            <div class="view">
+                <div class="view-header">
+                    <h1>Chatter</h1>
+                </div>
+                <div class="view-content">
+                    <div class="view-messages" id="messages-div">
+                    </div>
+                </div>
+                <div class="view-input">
+                    <input id="message-input" placeholder="Type Message"/>
+                    <button id="button-send">Send</button>
+                    <button id="button-open-file">Open Image</button>
+                    <input type="file" id="file-input" style="display:none;" accept="image/*">
+                </div>
             </div>
         </div>
-        <footer>
-            <p>Hello everyone</p>
-        </footer>
     </body>
 </html>

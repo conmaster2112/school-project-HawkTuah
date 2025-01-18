@@ -18,9 +18,11 @@ body {
     text-align: center;
     align-self: center;
 }
+
 .error {
     color: #d30b;
 }
+
 a {
     font-size: small;
     color: #2af;
@@ -32,10 +34,37 @@ a:hover {
     color: #4bf;
     cursor: pointer;
 }
+
 input {
     height: 1.6rem;
+
+    padding: 0.2rem 0.6rem;
     font-size: 1rem;
     border-radius: 0.3rem;
+    border: solid 1px var(--border-color);
+    background-color: var(--layer-color);
     color: var(--main-color);
-    padding: 0.2rem;
+}
+
+button {
+    height: 2.1rem;
+
+    padding: 0.2rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: solid 1px var(--border-color);
+    background-color: var(--layer-color);
+    color: var(--main-color);
+}
+
+button:hover {
+    background-color: #0001;
+}
+
+
+* {
+    scrollbar-width: 8px;
+    /* Width of the scrollbar */
+    scrollbar-color: var(--layer-color-reverse) transparent;
+    /* Color of the scroll thumb and track */
 }

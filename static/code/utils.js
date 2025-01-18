@@ -5,7 +5,7 @@
  */
 export function onButton(id, callback){
     const button = document.getElementById(id);
-    button.addEventListener("click", ()=>callback(button));
+    button?.addEventListener("click", ()=>callback(button));
 }
 /**
  * 
@@ -23,3 +23,4 @@ export function warnElement(e, timeout){
     e.style.borderColor = "#F003";
     setTimeout(()=>(e.style.borderColor = ""), timeout??2000);
 }
+export function delay(timeout){return new Promise((r)=>setTimeout(r, timeout),);}

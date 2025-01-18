@@ -1,0 +1,157 @@
+/*
+body {
+    padding-bottom: 5rem;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5rem;
+    padding: 0.2rem;
+    box-shadow: 0.0rem 0.1rem 0.5rem #0005;
+    backdrop-filter: blur(0.5rem);
+}
+footer {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    left: 0;
+    top: calc(100vh - 5rem);
+    height: 5rem;
+    backdrop-filter: blur(0.5rem);
+    background-color: #2222;
+}
+.content {
+    margin-top: 5rem;
+    margin: 5rem 2rem 5rem 2rem;
+    height: auto;
+    overflow: auto;
+}*/
+html {
+    background-image: url("/assets/sakura.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    text-align: center;
+}
+
+body {
+    --bg-color: #eee8;
+    background-color: var(--bg-color);
+    backdrop-filter: blur(10rem);
+    height: 100vh;
+    width: 100vw;
+}
+
+.dark {
+    --bg-color: #111c;
+}
+
+.sidebar {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 15%;
+    min-width: 10rem;
+    background-color: #8883;
+    border: 1px solid #0001;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 0px;
+    box-shadow: 0.2rem 0rem 0.4rem #0003;
+}
+
+.profile_picture {
+    object-fit: cover;
+    width: calc(100% - 2rem);
+    max-width: 15vh;
+    margin: 1rem;
+    padding: 0;
+    border-radius: 100rem;
+    /*box-shadow: 0.2rem 0.3rem 0.8rem #2228;*/
+}
+
+
+.body {
+    height: fit-content;
+}
+#settings {
+    margin: 0.2rem;
+}
+#profile-name {
+    font-size: large;
+}
+.view {
+    height: 100vh;
+    width: 85%;
+    max-width: calc(100% - 10rem);
+    justify-self: end;
+}
+.view-header {
+    height: 5rem;
+    padding: 0rem 1rem;
+    display: flex;
+    box-shadow: 0px 1rem 1rem -1rem #0008;
+}
+.view-input {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    bottom: 0;
+    width: 85%;
+    max-width: calc(100% - 10rem);
+    height: 3rem;
+    box-shadow: 0px -0.3rem 0.3rem -0.3rem #0008;
+}
+.view-input input {
+    width: 100%;
+    max-width: 75%;
+}
+#button-send{
+    margin: 0 0.2rem;
+    white-space: nowrap;
+}
+#button-open-image {
+    margin: 0 0.2rem;
+    white-space: nowrap;
+}
+.view-content {
+    display: flexbox;
+    position: fixed;
+    overflow-y: scroll;
+    bottom: 3rem;
+    width: 85%;
+    max-width: calc(100% - 10rem);
+    height: calc(100% - 3rem - 5rem);
+    background-color: #0001;
+}
+.view-messages {
+    width: 95%;
+    display: block;
+    align-self: flex-end;
+    justify-self: center;
+}
+
+.message-div {
+    display: block;
+    text-align: left;
+    width: inherit;
+    min-width: min-content;
+    background-color: #0002;
+    border-radius: 0.3rem;
+    margin: 0.2rem 0rem;
+    padding: 1rem;
+}
+#theme-toggle {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+}

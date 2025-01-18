@@ -3,6 +3,9 @@
     --main-color: #222;
     --main-background-2: #eee;
     --main-color-2: #333;
+    --layer-color: #8883;
+    --layer-color-reverse: #5558;
+    --border-color: #0002;
 }
 
 .dark {
@@ -10,4 +13,5 @@
     --main-color: #eee;
     --main-background-2: #333;
     --main-color-2: #eee;
+    --layer-color-reverse: #8888;
 }

@@ -23,10 +23,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-input {
-    background-color: #9992;
-    border: solid 1px #0002;
-}
 .form-content {
     display: flex;
     flex-direction: column;
